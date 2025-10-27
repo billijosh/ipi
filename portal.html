@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Student portal for Infoworld Professional Institute. Access your courses, grades, and resources.">
+    <title>Student Portal - Infoworld Professional Institute</title>
+    <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #2C3E50;
+            --secondary: #E74C3C; /* Official Brand Red */
+            --accent: #ECF0FF;
+        }
+        .portal-bg {
+            background: linear-gradient(rgba(30, 58, 138, 0.9), rgba(30, 58, 138, 0.9)), url('http://static.photos/education/1200x630/46');
+            background-size: cover;
+            background-position: center;
+        }
+        .login-card {
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        .form-input:focus {
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(231, 76, 60, 0.2); /* Red shadow for focus */
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-white shadow-md z-50">
+        <!-- Same navigation as index.html -->
+		<div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <a href="index.html" class="flex items-center">
+                <img src="ipilogo.png" alt="Infoworld Professional Institute Logo" class="h-12">
+            </a>
+            <div class="hidden md:flex space-x-8">
+                <a href="index.html" class="text-blue-900 font-medium nav-link">Home</a>
+                <a href="about.html" class="text-gray-600 hover:text-blue-900 font-medium nav-link">About</a>
+                <a href="courses.html" class="text-gray-600 hover:text-blue-900 font-medium nav-link">Courses</a>
+                <a href="admissions.html" class="text-gray-600 hover:text-blue-900 font-medium nav-link">Admissions</a>
+                <a href="events.html" class="text-gray-600 hover:text-blue-900 font-medium nav-link">Events</a>
+                <a href="contact.html" class="text-gray-600 hover:text-blue-900 font-medium nav-link">Contact</a>
+                <a href="blog.html" class="text-gray-600 hover:text-blue-900 font-medium nav-link">Blog</a>
+            </div>
+            <div class="flex items-center space-x-4">
+                <a href="portal.html" class="hidden md:block bg-blue-900 text-white px-4 py-2 rounded-lg hover:bg-blue-800 transition">Student Portal</a>
+                <button id="mobile-menu-button" class="md:hidden text-blue-900">
+                    <i data-feather="menu" class="w-6 h-6"></i>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white py-4 px-4 shadow-lg">
+            <a href="index.html" class="block py-2 text-blue-900 font-medium">Home</a>
+            <a href="about.html" class="block py-2 text-gray-600 hover:text-blue-900 font-medium">About</a>
+            <a href="courses.html" class="block py-2 text-gray-600 hover:text-blue-900 font-medium">Courses</a>
+            <a href="admissions.html" class="block py-2 text-gray-600 hover:text-blue-900 font-medium">Admissions</a>
+            <a href="events.html" class="block py-2 text-gray-600 hover:text-blue-900 font-medium">Events</a>
+            <a href="contact.html" class="block py-2 text-gray-600 hover:text-blue-900 font-medium">Contact</a>
+            <a href="portal.html" class="block mt-2 bg-blue-900 text-white px-4 py-2 rounded-lg text-center">Student Portal</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="portal-bg text-white pt-32 pb-20 md:pt-40 md:pb-32">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-4xl md:text-6xl font-bold mb-4">Student Portal</h1>
+            <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">Access your courses, grades, and learning resources</p>
+        </div>
+    </section>
+
+    <!-- Login Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-md mx-auto bg-white rounded-lg login-card p-8">
+                <h2 class="text-2xl font-bold text-blue-900 mb-6 text-center">Login to Your Account</h2>
+                <form id="loginForm" class="space-y-6">
+                    <div>
+                        <label for="username" class="block text-gray-700 font-medium mb-2">Username or Email*</label>
+                        <input type="text" id="username" name="username" required class="w-full px-4 py-2 border border-gray-300 rounded-lg form-input focus:outline-none">
+                    </div>
+                    <div>
+                        <label for="password" class="block text-gray-700 font-medium mb-2">Password*</label>
+                        <input type="password" id="password" name="password" required class="w-full px-4 py-2 border border-gray-300 rounded-lg form-input focus:outline-none">
+                    </div>
+                    <div class="flex justify-between items-center">
+                        <label class="flex items-center">
+                            <input type="checkbox" class="mr-2">
+                            <span class="text-gray-700">Remember me</span>
+                        </label>
+                        <a href="#" class="text-blue-900 hover:text-blue-700 font-medium">Forgot password?</a>
+                    </div>
+                    <button type="submit" class="w-full bg-blue-900 hover:bg-blue-800 text-white font-bold py-3 px-4 rounded-lg transition duration-300">
+                        Sign In
+                    </button>
+                    <div class="text-center">
+                        <p class="text-gray-600">Don't have an account? <a href="admissions.html" class="text-blue-900 hover:text-blue-700 font-medium">Apply now</a></p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portal Features -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-blue-900 mb-4">Portal Features</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Everything you need for a successful learning experience</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Feature 1 -->
+                <div class="bg-white p-6 rounded-lg shadow-sm">
+                    <div class="bg-blue-100 text-blue-900 w-12 h-12 rounded-full flex items-center justify-center mb-4 mx-auto">
+                        <i data-feather="book" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-center text-blue-900 mb-2">Course Materials</h3>
+                    <p class="text-gray-600 text-center">Access all your learning resources, lecture notes, and assignments in one place.</p>
+                </div>
+                <!-- Feature 2 -->
+                <div class="bg-white p-6 rounded-lg shadow-sm">
+                    <div class="bg-blue-100 text-blue-900 w-12 h-12 rounded-full flex items-center justify-center mb-4 mx-auto">
+                        <i data-feather="bar-chart-2" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-center text-blue-900 mb-2">Progress Tracking</h3>
+                    <p class="text-gray-600 text-center">Monitor your grades, attendance, and overall progress through the program.</p>
+                </div>
+                <!-- Feature 3 -->
+                <div class="bg-white p-6 rounded-lg shadow-sm">
+                    <div class="bg-blue-100 text-blue-900 w-12 h-12 rounded-full flex items-center justify-center mb-4 mx-auto">
+                        <i data-feather="message-square" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-center text-blue-900 mb-2">Instructor Communication</h3>
+                    <p class="text-gray-600 text-center">Connect with your instructors and classmates through our messaging system.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technical Support -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto bg-blue-900 text-white rounded-lg p-8">
+                <div class="flex flex-col md:flex-row items-center">
+                    <div class="md:w-1/2 mb-6 md:mb-0">
+                        <h2 class="text-2xl font-bold mb-2">Need Technical Support?</h2>
+                        <p class="mb-4">Having trouble accessing the portal? Our support team is here to help.</p>
+                        <div class="flex items-center">
+                            <i data-feather="mail" class="mr-2 w-5 h-5"></i>
+                            <!-- NOTE: Changed to consistent email address -->
+                            <span>info@infoworldinstitute.org</span>
+                        </div>
+                    </div>
+                    <div class="md:w-1/2">
+                        <img src="http://static.photos/technology/640x360/4" alt="Support" class="rounded-lg w-full">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <!-- Same footer as index.html -->
+	<!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Infoworld Institute</h3>
+                    <p class="text-gray-400 mb-4">Empowering individuals through quality education and professional training in Ghana.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white"><i data-feather="facebook"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i data-feather="twitter"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i data-feather="instagram"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i data-feather="linkedin"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-400 hover:text-white">Home</a></li>
+                        <li><a href="about.html" class="text-gray-400 hover:text-white">About Us</a></li>
+                        <li><a href="courses.html" class="text-gray-400 hover:text-white">Courses</a></li>
+                        <li><a href="admissions.html" class="text-gray-400 hover:text-white">Admissions</a></li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-white">Contact</a></li>
+                        <li><a href="blog.html" class="text-gray-400 hover:text-white">Blog</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Contact Info</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li class="flex items-start">
+                            <i data-feather="map-pin" class="mr-2 mt-1 w-4 h-4"></i>
+                            <span>123 Hill Street, Accra, Ghana</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-feather="phone" class="mr-2 mt-1 w-4 h-4"></i>
+                            <span>+233 123 456 789</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-feather="mail" class="mr-2 mt-1 w-4 h-4"></i>
+                            <span>info@infoworldinstitute.org</span>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Newsletter</h4>
+                    <p class="text-gray-400 mb-4">Subscribe to our newsletter for course updates and educational resources.</p>
+                    <form class="flex">
+                        <input type="email" placeholder="Your email" class="bg-gray-800 text-white px-4 py-2 rounded-l-lg focus:outline-none focus:ring-2 focus:ring-red-500 w-full">
+                        <button type="submit" class="bg-red-500 hover:bg-red-600 text-white px-4 py-2 rounded-r-lg transition duration-300">
+                            <i data-feather="send" class="w-4 h-4"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2025 Infoworld Professional Institute. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+        <!-- Floating WhatsApp Button -->
+        <a href="https://wa.me/233123456789" target="_blank" class="fixed bottom-6 right-6 bg-red-500 text-white p-3 rounded-full shadow-lg hover:bg-red-600 transition duration-300">
+<i data-feather="message-circle" class="w-6 h-6"></i>
+    </a>
+
+    <!-- Scripts -->
+    <script>
+        // Form Submission
+        document.getElementById('loginForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Login functionality will be implemented in the full version. For now, please use the contact page for assistance.');
+            this.reset();
+        });
+
+        feather.replace();
+        // Same mobile menu toggle as index.html
+		document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+
+    </script>
+</body>
+</html>

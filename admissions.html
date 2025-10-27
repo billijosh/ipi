@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Admissions process for Infoworld Professional Institute in Ghana. Learn how to apply for our language and professional training programs.">
+    <title>Admissions - Infoworld Professional Institute</title>
+    <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #2C3E50;
+            --secondary: #E74C3C; /* Official Brand Red */
+            --accent: #ECF0FF;
+        }
+        .step-number {
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            background-color: var(--secondary);
+            color: white;
+            font-weight: bold;
+            margin-right: 16px;
+        }
+        .step-content {
+            flex: 1;
+        }
+        .form-input {
+            transition: border-color 0.3s ease;
+        }
+        .form-input:focus {
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(231, 76, 60, 0.2); /* Red shadow for focus */
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-white shadow-md z-50">
+        <!-- Same navigation as index.html -->
+		 <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <a href="index.html" class="flex items-center">
+                <img src="ipilogo.png" alt="Infoworld Professional Institute Logo" class="h-12">
+            </a>
+
+            <div class="hidden md:flex space-x-8">
+                <a href="index.html" class="text-blue-900 font-medium nav-link">Home</a>
+                <a href="about.html" class="text-gray-600 hover:text-blue-900 font-medium nav-link">About</a>
+                <a href="courses.html" class="text-gray-600 hover:text-blue-900 font-medium nav-link">Courses</a>
+                <a href="admissions.html" class="text-gray-600 hover:text-blue-900 font-medium nav-link">Admissions</a>
+                <a href="events.html" class="text-gray-600 hover:text-blue-900 font-medium nav-link">Events</a>
+                <a href="contact.html" class="text-gray-600 hover:text-blue-900 font-medium nav-link">Contact</a>
+                <a href="blog.html" class="text-gray-600 hover:text-blue-900 font-medium nav-link">Blog</a>
+            </div>
+            <div class="flex items-center space-x-4">
+                <a href="portal.html" class="hidden md:block bg-blue-900 text-white px-4 py-2 rounded-lg hover:bg-blue-800 transition">Student Portal</a>
+                <button id="mobile-menu-button" class="md:hidden text-blue-900">
+                    <i data-feather="menu" class="w-6 h-6"></i>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white py-4 px-4 shadow-lg">
+            <a href="index.html" class="block py-2 text-blue-900 font-medium">Home</a>
+            <a href="about.html" class="block py-2 text-gray-600 hover:text-blue-900 font-medium">About</a>
+            <a href="courses.html" class="block py-2 text-gray-600 hover:text-blue-900 font-medium">Courses</a>
+            <a href="admissions.html" class="block py-2 text-gray-600 hover:text-blue-900 font-medium">Admissions</a>
+            <a href="events.html" class="block py-2 text-gray-600 hover:text-blue-900 font-medium">Events</a>
+            <a href="contact.html" class="block py-2 text-gray-600 hover:text-blue-900 font-medium">Contact</a>
+            <a href="portal.html" class="block mt-2 bg-blue-900 text-white px-4 py-2 rounded-lg text-center">Student Portal</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="bg-gray-800 text-white pt-32 pb-20 md:pt-40 md:pb-32">
+<div class="container mx-auto px-4 text-center">
+            <h1 class="text-4xl md:text-6xl font-bold mb-4">Admissions</h1>
+            <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">Start your journey to professional and language skills development</p>
+        </div>
+    </section>
+
+    <!-- Application Process -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-blue-900 mb-4">How to Apply</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Our simple 4-step process makes it easy to join our programs</p>
+            </div>
+            <div class="max-w-3xl mx-auto">
+                <!-- Step 1 -->
+                <div class="flex mb-8">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3 class="text-xl font-bold text-blue-900 mb-2">Choose Your Course</h3>
+                        <p class="text-gray-600">Browse our course catalog and select the program that matches your goals. Need help deciding? <a href="contact.html" class="text-blue-900 hover:underline">Contact our advisors</a>.</p>
+                    </div>
+                </div>
+                <!-- Step 2 -->
+                <div class="flex mb-8">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3 class="text-xl font-bold text-blue-900 mb-2">Complete Application</h3>
+                        <p class="text-gray-600">Fill out our online application form below or visit our campus to apply in person.</p>
+                    </div>
+                </div>
+                <!-- Step 3 -->
+                <div class="flex mb-8">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3 class="text-xl font-bold text-blue-900 mb-2">Submit Documents</h3>
+                        <p class="text-gray-600">For certain programs, you may need to provide additional documents (ID, previous certificates). Our team will guide you.</p>
+                    </div>
+                </div>
+                <!-- Step 4 -->
+                <div class="flex">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h3 class="text-xl font-bold text-blue-900 mb-2">Complete Registration</h3>
+                        <p class="text-gray-600">Pay your tuition fees and receive your course materials and schedule to begin classes.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Application Form -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="max-w-3xl mx-auto bg-white rounded-lg shadow-md p-8">
+                <h2 class="text-2xl font-bold text-blue-900 mb-6">Online Application Form</h2>
+                <form id="admissionForm" class="space-y-6">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label for="firstName" class="block text-gray-700 font-medium mb-2">First Name*</label>
+                            <!-- UPDATED: Focus ring to Red-500 -->
+                            <input type="text" id="firstName" name="firstName" required class="w-full px-4 py-2 border border-gray-300 rounded-lg form-input focus:outline-none focus:ring-2 focus:ring-red-500">
+                        </div>
+                        <div>
+                            <label for="lastName" class="block text-gray-700 font-medium mb-2">Last Name*</label>
+                            <!-- UPDATED: Focus ring to Red-500 -->
+                            <input type="text" id="lastName" name="lastName" required class="w-full px-4 py-2 border border-gray-300 rounded-lg form-input focus:outline-none focus:ring-2 focus:ring-red-500">
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label for="email" class="block text-gray-700 font-medium mb-2">Email*</label>
+                            <!-- UPDATED: Focus ring to Red-500 -->
+                            <input type="email" id="email" name="email" required class="w-full px-4 py-2 border border-gray-300 rounded-lg form-input focus:outline-none focus:ring-2 focus:ring-red-500">
+                        </div>
+                        <div>
+                            <label for="phone" class="block text-gray-700 font-medium mb-2">Phone Number*</label>
+                            <!-- UPDATED: Focus ring to Red-500 -->
+                            <input type="tel" id="phone" name="phone" required class="w-full px-4 py-2 border border-gray-300 rounded-lg form-input focus:outline-none focus:ring-2 focus:ring-red-500">
+                        </div>
+                    </div>
+                    <div>
+                        <label for="course" class="block text-gray-700 font-medium mb-2">Select Course*</label>
+                        <!-- UPDATED: Focus ring to Red-500 -->
+                        <select id="course" name="course" required class="w-full px-4 py-2 border border-gray-300 rounded-lg form-input focus:outline-none focus:ring-2 focus:ring-red-500">
+                            <option value="">-- Select a Course --</option>
+                            <optgroup label="Language Courses">
+                                <option value="english-beginner">English Beginner</option>
+                                <option value="english-intermediate">English Intermediate</option>
+                                <option value="english-advanced">English Advanced</option>
+                                <option value="french-beginner">French Beginner</option>
+                                <option value="french-intermediate">French Intermediate</option>
+                                <option value="french-business">French for Business</option>
+                            </optgroup>
+                            <optgroup label="Professional Courses">
+                                <option value="word-excel">Word & Excel Basics</option>
+                                <option value="excel-advanced">Advanced Excel</option>
+                                <option value="powerpoint-outlook">PowerPoint & Outlook</option>
+                                <option value="digital-marketing">Digital Marketing</option>
+                            </optgroup>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="schedule" class="block text-gray-700 font-medium mb-2">Preferred Schedule</label>
+                        <!-- UPDATED: Focus ring to Red-500 -->
+                        <select id="schedule" name="schedule" class="w-full px-4 py-2 border border-gray-300 rounded-lg form-input focus:outline-none focus:ring-2 focus:ring-red-500">
+                            <option value="">-- Select Schedule --</option>
+                            <option value="morning">Morning (9am-12pm)</option>
+                            <option value="afternoon">Afternoon (1pm-4pm)</option>
+                            <option value="evening">Evening (5pm-8pm)</option>
+                            <option value="weekend">Weekend (Sat 9am-1pm)</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="message" class="block text-gray-700 font-medium mb-2">Additional Information</label>
+                        <!-- UPDATED: Focus ring to Red-500 -->
+                        <textarea id="message" name="message" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-lg form-input focus:outline-none focus:ring-2 focus:ring-red-500"></textarea>
+                    </div>
+                    <div>
+                        <label class="flex items-start">
+                            <input type="checkbox" required class="mt-1 mr-2">
+                            <span class="text-gray-700">I agree to the <a href="#" class="text-blue-900 hover:underline">terms and conditions</a> and privacy policy*</span>
+                        </label>
+                    </div>
+                    <button type="submit" class="w-full bg-blue-900 hover:bg-blue-800 text-white font-bold py-3 px-4 rounded-lg transition duration-300">
+                        Submit Application
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Application Status -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-3xl font-bold text-blue-900 mb-6 text-center">Check Your Application Status</h2>
+                <div class="bg-gray-50 p-8 rounded-lg">
+                    <p class="text-gray-600 mb-6">Already applied? Enter your application reference number to check the status of your admission.</p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <!-- UPDATED: Focus ring to Red-500 -->
+                        <input type="text" placeholder="Application Reference Number" class="flex-grow px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500">
+                        <button class="bg-blue-900 hover:bg-blue-800 text-white font-bold py-2 px-6 rounded-lg transition duration-300 whitespace-nowrap">
+                            Check Status
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQs -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-blue-900 mb-4">Frequently Asked Questions</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Find answers to common questions about our admissions process</p>
+            </div>
+            <div class="max-w-3xl mx-auto">
+                <!-- FAQ Item 1 -->
+                <div class="mb-6">
+                    <button class="faq-question w-full text-left px-6 py-4 bg-white rounded-lg shadow-sm flex justify-between items-center">
+                        <span class="text-lg font-medium text-blue-900">What are the admission requirements?</span>
+                        <i data-feather="chevron-down" class="faq-icon w-5 h-5 text-blue-900 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-answer hidden px-6 py-4 bg-white mt-1 rounded-b-lg">
+                        <p class="text-gray-600">Requirements vary by program. For language courses, no prior experience is needed. For professional courses, basic computer literacy is recommended. International students may need to provide proof of visa status.</p>
+                    </div>
+                </div>
+                <!-- FAQ Item 2 -->
+                <div class="mb-6">
+                    <button class="faq-question w-full text-left px-6 py-4 bg-white rounded-lg shadow-sm flex justify-between items-center">
+                        <span class="text-lg font-medium text-blue-900">When do courses start?</span>
+                        <i data-feather="chevron-down" class="faq-icon w-5 h-5 text-blue-900 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-answer hidden px-6 py-4 bg-white mt-1 rounded-b-lg">
+                        <p class="text-gray-600">We have rolling admissions with new sessions starting monthly. After applying, you'll be notified of the next available start date for your chosen program.</p>
+                    </div>
+                </div>
+                <!-- FAQ Item 3 -->
+                <div class="mb-6">
+                    <button class="faq-question w-full text-left px-6 py-4 bg-white rounded-lg shadow-sm flex justify-between items-center">
+                        <span class="text-lg font-medium text-blue-900">Are there any discounts available?</span>
+                        <i data-feather="chevron-down" class="faq-icon w-5 h-5 text-blue-900 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-answer hidden px-6 py-4 bg-white mt-1 rounded-b-lg">
+                        <p class="text-gray-600">Yes! We offer early bird discounts for applicants who register at least 3 weeks before course start dates. We also have group discounts for organizations enrolling 3 or more students.</p>
+                    </div>
+                </div>
+                <!-- FAQ Item 4 -->
+                <div class="mb-6">
+                    <button class="faq-question w-full text-left px-6 py-4 bg-white rounded-lg shadow-sm flex justify-between items-center">
+                        <span class="text-lg font-medium text-blue-900">What payment methods do you accept?</span>
+                        <i data-feather="chevron-down" class="faq-icon w-5 h-5 text-blue-900 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-answer hidden px-6 py-4 bg-white mt-1 rounded-b-lg">
+                        <p class="text-gray-600">We accept mobile money payments (MTN, Vodafone Cash), bank transfers, credit/debit cards (Visa, Mastercard), and cash payments at our campus.</p>
+                    </div>
+                </div>
+                <!-- FAQ Item 5 -->
+                <div class="mb-6">
+                    <button class="faq-question w-full text-left px-6 py-4 bg-white rounded-lg shadow-sm flex justify-between items-center">
+                        <span class="text-lg font-medium text-blue-900">Can I get a refund if I change my mind?</span>
+                        <i data-feather="chevron-down" class="faq-icon w-5 h-5 text-blue-900 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-answer hidden px-6 py-4 bg-white mt-1 rounded-b-lg">
+                        <p class="text-gray-600">Refund policies vary by program. Generally, full refunds are available up to 7 days before course start date. After that, partial refunds may be available depending on circumstances. See our full refund policy for details.</p>
+                    </div>
+                </div>
+                <!-- FAQ Item 6 -->
+                <div>
+                    <button class="faq-question w-full text-left px-6 py-4 bg-white rounded-lg shadow-sm flex justify-between items-center">
+                        <span class="text-lg font-medium text-blue-900">Do you offer certificates upon completion?</span>
+                        <i data-feather="chevron-down" class="faq-icon w-5 h-5 text-blue-900 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-answer hidden px-6 py-4 bg-white mt-1 rounded-b-lg">
+                        <p class="text-gray-600">Yes, all our courses provide certificates of completion. Some professional courses also offer preparation for international certification exams (additional fees may apply).</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Brochure Download -->
+    <section class="py-16 bg-gray-800 text-white">
+<div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold mb-6">Download Our Course Brochure</h2>
+            <p class="text-xl mb-8 max-w-2xl mx-auto">Get detailed information about all our programs in one convenient PDF.</p>
+            <!-- UPDATED: Yellow to Red -->
+            <a href="#" class="inline-block bg-red-500 hover:bg-red-600 text-white font-bold py-3 px-8 rounded-lg transition duration-300">
+                <i data-feather="download" class="inline mr-2 w-5 h-5"></i> Download Brochure
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <!-- Same footer as index.html -->
+	<!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Infoworld Professional</h3>
+                    <p class="text-gray-400 mb-4">Empowering individuals through quality education and professional training in Ghana.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white"><i data-feather="facebook"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i data-feather="twitter"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i data-feather="instagram"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i data-feather="linkedin"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-400 hover:text-white">Home</a></li>
+                        <li><a href="about.html" class="text-gray-400 hover:text-white">About Us</a></li>
+                        <li><a href="courses.html" class="text-gray-400 hover:text-white">Courses</a></li>
+                        <li><a href="admissions.html" class="text-gray-400 hover:text-white">Admissions</a></li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-white">Contact</a></li>
+                        <li><a href="blog.html" class="text-gray-400 hover:text-white">Blog</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Contact Info</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li class="flex items-start">
+                            <i data-feather="map-pin" class="mr-2 mt-1 w-4 h-4"></i>
+                            <span>123 Hill Street, Accra, Ghana</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-feather="phone" class="mr-2 mt-1 w-4 h-4"></i>
+                            <span>+233 123 456 789</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-feather="mail" class="mr-2 mt-1 w-4 h-4"></i>
+                            <span>info@infoworldinstitute.org</span>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Newsletter</h4>
+                    <p class="text-gray-400 mb-4">Subscribe to our newsletter for course updates and educational resources.</p>
+                    <form class="flex">
+                        <!-- UPDATED: Focus ring and button color to Red -->
+                        <input type="email" placeholder="Your email" class="bg-gray-800 text-white px-4 py-2 rounded-l-lg focus:outline-none focus:ring-2 focus:ring-red-500 w-full">
+                        <button type="submit" class="bg-red-500 hover:bg-red-600 text-white px-4 py-2 rounded-r-lg transition duration-300">
+                            <i data-feather="send" class="w-4 h-4"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2025 Infoworld Professional Institute. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+        <!-- Floating WhatsApp Button -->
+        <a href="https://wa.me/233123456789" target="_blank" class="fixed bottom-6 right-6 bg-red-500 text-white p-3 rounded-full shadow-lg hover:bg-red-600 transition duration-300">
+<i data-feather="message-circle" class="w-6 h-6"></i>
+    </a>
+
+    <!-- Scripts -->
+    <script>
+        // Form Submission
+        document.getElementById('admissionForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your application! We will contact you within 2 business days.');
+            this.reset();
+        });
+
+        // FAQ Accordion
+        const faqQuestions = document.querySelectorAll('.faq-question');
+        faqQuestions.forEach(question => {
+            question.addEventListener('click', () => {
+                const answer = question.nextElementSibling;
+                const icon = question.querySelector('.faq-icon');
+                
+                // Toggle answer visibility
+                answer.classList.toggle('hidden');
+                
+                // Rotate icon
+                if (answer.classList.contains('hidden')) {
+                    icon.style.transform = 'rotate(0deg)';
+                } else {
+                    icon.style.transform = 'rotate(180deg)';
+                }
+            });
+        });
+
+        feather.replace();
+        // Same mobile menu toggle as index.html
+		
+		document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+
+    </script>
+</body>
+</html>

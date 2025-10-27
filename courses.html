@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore our comprehensive courses at Infoworld Professional Institute - English, French, Microsoft Office, Marketing, and Digital Marketing training programs.">
+    <title>Our Courses - Infoworld Professional Institute</title>
+    <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #2C3E50;
+            --secondary: #E74C3C; /* Official Brand Red */
+            --accent: #ECF0FF;
+        }
+        .course-tab.active {
+            color: var(--primary);
+            border-bottom: 3px solid var(--secondary);
+        }
+        .course-details {
+            display: none;
+        }
+        .course-details.active {
+            display: block;
+            animation: fadeIn 0.5s ease;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-white shadow-md z-50">
+        <!-- Same navigation as index.html -->
+		 <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <a href="index.html" class="flex items-center">
+                <img src="ipilogo.png" alt="Infoworld Professional Institute Logo" class="h-12"> 
+            </a>
+            <div class="hidden md:flex space-x-8">
+                <a href="index.html" class="text-blue-900 font-medium nav-link">Home</a>
+                <a href="about.html" class="text-gray-600 hover:text-blue-900 font-medium nav-link">About</a>
+                <a href="courses.html" class="text-gray-600 hover:text-blue-900 font-medium nav-link">Courses</a>
+                <a href="admissions.html" class="text-gray-600 hover:text-blue-900 font-medium nav-link">Admissions</a>
+                <a href="events.html" class="text-gray-600 hover:text-blue-900 font-medium nav-link">Events</a>
+                <a href="contact.html" class="text-gray-600 hover:text-blue-900 font-medium nav-link">Contact</a>
+                <a href="blog.html" class="text-gray-600 hover:text-blue-900 font-medium nav-link">Blog</a>
+            </div>
+            <div class="flex items-center space-x-4">
+                <a href="portal.html" class="hidden md:block bg-blue-900 text-white px-4 py-2 rounded-lg hover:bg-blue-800 transition">Student Portal</a>
+                <button id="mobile-menu-button" class="md:hidden text-blue-900">
+                    <i data-feather="menu" class="w-6 h-6"></i>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white py-4 px-4 shadow-lg">
+            <a href="index.html" class="block py-2 text-blue-900 font-medium">Home</a>
+            <a href="about.html" class="block py-2 text-gray-600 hover:text-blue-900 font-medium">About</a>
+            <a href="courses.html" class="block py-2 text-gray-600 hover:text-blue-900 font-medium">Courses</a>
+            <a href="admissions.html" class="block py-2 text-gray-600 hover:text-blue-900 font-medium">Admissions</a>
+            <a href="events.html" class="block py-2 text-gray-600 hover:text-blue-900 font-medium">Events</a>
+            <a href="contact.html" class="block py-2 text-gray-600 hover:text-blue-900 font-medium">Contact</a>
+            <a href="portal.html" class="block mt-2 bg-blue-900 text-white px-4 py-2 rounded-lg text-center">Student Portal</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="bg-blue-900 text-white pt-32 pb-20 md:pt-40 md:pb-32">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-4xl md:text-6xl font-bold mb-4">Our Courses</h1>
+            <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">Comprehensive training programs designed for career success</p>
+        </div>
+    </section>
+
+    <!-- Course Categories -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="border-b border-gray-200 mb-8">
+                <div class="flex flex-wrap -mb-px space-x-4 md:space-x-8 overflow-x-auto pb-1">
+                    <button class="course-tab active py-2 px-1 font-medium text-lg" data-tab="all">All Courses</button>
+                    <button class="course-tab py-2 px-1 font-medium text-lg" data-tab="english">English Language</button>
+                    <button class="course-tab py-2 px-1 font-medium text-lg" data-tab="french">French Language</button>
+                    <button class="course-tab py-2 px-1 font-medium text-lg" data-tab="office">Microsoft Office</button>
+                    <button class="course-tab py-2 px-1 font-medium text-lg" data-tab="marketing">Marketing</button>
+                    <button class="course-tab py-2 px-1 font-medium text-lg" data-tab="digital">Digital Marketing</button>
+                </div>
+            </div>
+            
+            <!-- Search and Filter -->
+            <div class="mb-8 flex flex-col md:flex-row justify-between items-center">
+                <div class="w-full md:w-1/3 mb-4 md:mb-0">
+                    <div class="relative">
+                        <!-- UPDATED: Focus ring to Red -->
+                        <input type="text" placeholder="Search courses..." class="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent">
+                        <i data-feather="search" class="absolute left-3 top-3 text-gray-400"></i>
+                    </div>
+                </div>
+                <div class="w-full md:w-1/3">
+                    <!-- UPDATED: Focus ring to Red -->
+                    <select class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent">
+                        <option>Sort by: Recommended</option>
+                        <option>Sort by: Duration (Shortest First)</option>
+                        <option>Sort by: Duration (Longest First)</option>
+                        <option>Sort by: Price (Low to High)</option>
+                        <option>Sort by: Price (High to Low)</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Course List -->
+            <div id="course-container">
+                <!-- English Language Courses -->
+                <div id="english" class="course-details active">
+                    <h2 class="text-2xl font-bold text-blue-900 mb-6">English Language Courses</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        <!-- English Beginner -->
+                        <div class="bg-white rounded-lg shadow-md overflow-hidden transition duration-300 hover:shadow-lg">
+                            <img src="http://static.photos/education/640x360/9" alt="English Beginner Course" class="w-full h-48 object-cover">
+                            <div class="p-6">
+                                <h3 class="text-xl font-bold text-blue-900 mb-2">English Beginner</h3>
+                                <p class="text-gray-600 mb-4">Start your English learning journey with foundational grammar, vocabulary and conversation skills.</p>
+                                <div class="flex justify-between items-center mb-4">
+                                    <!-- UPDATED: Yellow to Red -->
+                                    <span class="text-red-500 font-medium">8 Weeks</span>
+                                    <span class="text-blue-900 font-bold">GHS 1,200</span>
+                                </div>
+                                <div class="flex justify-between items-center">
+                                    <span class="text-sm text-gray-500"><i data-feather="clock" class="inline mr-1 w-4 h-4"></i> Mon & Wed, 4-6pm</span>
+                                    <a href="admissions.html" class="text-blue-900 hover:text-blue-700 font-medium">Enroll Now</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- English Intermediate -->
+                        <div class="bg-white rounded-lg shadow-md overflow-hidden transition duration-300 hover:shadow-lg">
+                            <img src="http://static.photos/education/640x360/10" alt="English Intermediate Course" class="w-full h-48 object-cover">
+                            <div class="p-6">
+                                <h3 class="text-xl font-bold text-blue-900 mb-2">English Intermediate</h3>
+                                <p class="text-gray-600 mb-4">Build fluency with more complex grammar structures and expanded vocabulary for daily communication.</p>
+                                <div class="flex justify-between items-center mb-4">
+                                    <!-- UPDATED: Yellow to Red -->
+                                    <span class="text-red-500 font-medium">8 Weeks</span>
+                                    <span class="text-blue-900 font-bold">GHS 1,400</span>
+                                </div>
+                                <div class="flex justify-between items-center">
+                                    <span class="text-sm text-gray-500"><i data-feather="clock" class="inline mr-1 w-4 h-4"></i> Tue & Thu, 4-6pm</span>
+                                    <a href="admissions.html" class="text-blue-900 hover:text-blue-700 font-medium">Enroll Now</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- English Advanced -->
+                        <div class="bg-white rounded-lg shadow-md overflow-hidden transition duration-300 hover:shadow-lg">
+                            <img src="http://static.photos/education/640x360/11" alt="English Advanced Course" class="w-full h-48 object-cover">
+                            <div class="p-6">
+                                <h3 class="text-xl font-bold text-blue-900 mb-2">English Advanced</h3>
+                                <p class="text-gray-600 mb-4">Master sophisticated language use for academic, professional and social contexts.</p>
+                                <div class="flex justify-between items-center mb-4">
+                                    <!-- UPDATED: Yellow to Red -->
+                                    <span class="text-red-500 font-medium">10 Weeks</span>
+                                    <span class="text-blue-900 font-bold">GHS 1,800</span>
+                                </div>
+                                <div class="flex justify-between items-center">
+                                    <span class="text-sm text-gray-500"><i data-feather="clock" class="inline mr-1 w-4 h-4"></i> Mon & Wed, 6-8pm</span>
+                                    <a href="admissions.html" class="text-blue-900 hover:text-blue-700 font-medium">Enroll Now</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- French Language Courses -->
+                <div id="french" class="course-details">
+                    <h2 class="text-2xl font-bold text-blue-900 mb-6">French Language Courses</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        <!-- French Beginner -->
+                        <div class="bg-white rounded-lg shadow-md overflow-hidden transition duration-300 hover:shadow-lg">
+                            <img src="http://static.photos/education/640x360/12" alt="French Beginner Course" class="w-full h-48 object-cover">
+                            <div class="p-6">
+                                <h3 class="text-xl font-bold text-blue-900 mb-2">French Beginner</h3>
+                                <p class="text-gray-600 mb-4">Introduction to French language with basic vocabulary, grammar and conversational skills.</p>
+                                <div class="flex justify-between items-center mb-4">
+                                    <!-- UPDATED: Yellow to Red -->
+                                    <span class="text-red-500 font-medium">10 Weeks</span>
+                                    <span class="text-blue-900 font-bold">GHS 1,400</span>
+                                </div>
+                                <div class="flex justify-between items-center">
+                                    <span class="text-sm text-gray-500"><i data-feather="clock" class="inline mr-1 w-4 h-4"></i> Tue & Thu, 2-4pm</span>
+                                    <a href="admissions.html" class="text-blue-900 hover:text-blue-700 font-medium">Enroll Now</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- French Intermediate -->
+                        <div class="bg-white rounded-lg shadow-md overflow-hidden transition duration-300 hover:shadow-lg">
+                            <img src="http://static.photos/education/640x360/13" alt="French Intermediate Course" class="w-full h-48 object-cover">
+                            <div class="p-6">
+                                <h3 class="text-xl font-bold text-blue-900 mb-2">French Intermediate</h3>
+                                <p class="text-gray-600 mb-4">Build on basic knowledge with more complex grammar and expanded vocabulary.</p>
+                                <div class="flex justify-between items-center mb-4">
+                                    <!-- UPDATED: Yellow to Red -->
+                                    <span class="text-red-500 font-medium">10 Weeks</span>
+                                    <span class="text-blue-900 font-bold">GHS 1,600</span>
+                                </div>
+                                <div class="flex justify-between items-center">
+                                    <span class="text-sm text-gray-500"><i data-feather="clock" class="inline mr-1 w-4 h-4"></i> Mon & Wed, 2-4pm</span>
+                                    <a href="admissions.html" class="text-blue-900 hover:text-blue-700 font-medium">Enroll Now</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- French Business -->
+                        <div class="bg-white rounded-lg shadow-md overflow-hidden transition duration-300 hover:shadow-lg">
+                            <img src="http://static.photos/education/640x360/14" alt="French Business Course" class="w-full h-48 object-cover">
+                            <div class="p-6">
+                                <h3 class="text-xl font-bold text-blue-900 mb-2">French for Business</h3>
+                                <p class="text-gray-600 mb-4">Specialized course focusing on business communication in French-speaking environments.</p>
+                                <div class="flex justify-between items-center mb-4">
+                                    <!-- UPDATED: Yellow to Red -->
+                                    <span class="text-red-500 font-medium">12 Weeks</span>
+                                    <span class="text-blue-900 font-bold">GHS 2,000</span>
+                                </div>
+                                <div class="flex justify-between items-center">
+                                    <span class="text-sm text-gray-500"><i data-feather="clock" class="inline mr-1 w-4 h-4"></i> Sat, 9am-1pm</span>
+                                    <a href="admissions.html" class="text-blue-900 hover:text-blue-700 font-medium">Enroll Now</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Microsoft Office Courses -->
+                <div id="office" class="course-details">
+                    <h2 class="text-2xl font-bold text-blue-900 mb-6">Microsoft Office Courses</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        <!-- Word & Excel Basics -->
+                        <div class="bg-white rounded-lg shadow-md overflow-hidden transition duration-300 hover:shadow-lg">
+                            <img src="http://static.photos/technology/640x360/1" alt="Word & Excel Course" class="w-full h-48 object-cover">
+                            <div class="p-6">
+                                <h3 class="text-xl font-bold text-blue-900 mb-2">Word & Excel Basics</h3>
+                                <p class="text-gray-600 mb-4">Essential skills for creating professional documents and spreadsheets.</p>
+                                <div class="flex justify-between items-center mb-4">
+                                    <!-- UPDATED: Yellow to Red -->
+                                    <span class="text-red-500 font-medium">4 Weeks</span>
+                                    <span class="text-blue-900 font-bold">GHS 800</span>
+                                </div>
+                                <div class="flex justify-between items-center">
+                                    <span class="text-sm text-gray-500"><i data-feather="clock" class="inline mr-1 w-4 h-4"></i> Mon & Wed, 6-8pm</span>
+                                    <a href="admissions.html" class="text-blue-900 hover:text-blue-700 font-medium">Enroll Now</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Advanced Excel -->
+                        <div class="bg-white rounded-lg shadow-md overflow-hidden transition duration-300 hover:shadow-lg">
+                            <img src="http://static.photos/technology/640x360/2" alt="Advanced Excel Course" class="w-full h-48 object-cover">
+                            <div class="p-6">
+                                <h3 class="text-xl font-bold text-blue-900 mb-2">Advanced Excel</h3>
+                                <p class="text-gray-600 mb-4">Master complex formulas, pivot tables, and data analysis tools.</p>
+                                <div class="flex justify-between items-center mb-4">
+                                    <!-- UPDATED: Yellow to Red -->
+                                    <span class="text-red-500 font-medium">6 Weeks</span>
+                                    <span class="text-blue-900 font-bold">GHS 1,200</span>
+                                </div>
+                                <div class="flex justify-between items-center">
+                                    <span class="text-sm text-gray-500"><i data-feather="clock" class="inline mr-1 w-4 h-4"></i> Tue & Thu, 6-8pm</span>
+                                    <a href="admissions.html" class="text-blue-900 hover:text-blue-700 font-medium">Enroll Now</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- PowerPoint & Outlook -->
+                        <div class="bg-white rounded-lg shadow-md overflow-hidden transition duration-300 hover:shadow-lg">
+                            <img src="http://static.photos/technology/640x360/3" alt="PowerPoint & Outlook Course" class="w-full h-48 object-cover">
+                            <div class="p-6">
+                                <h3 class="text-xl font-bold text-blue-900 mb-2">PowerPoint & Outlook</h3>
+                                <p class="text-gray-600 mb-4">Create compelling presentations and master email management.</p>
+                                <div class="flex justify-between items-center mb-4">
+                                    <!-- UPDATED: Yellow to Red -->
+                                    <span class="text-red-500 font-medium">4 Weeks</span>
+                                    <span class="text-blue-900 font-bold">GHS 900</span>
+                                </div>
+                                <div class="flex justify-between items-center">
+                                    <span class="text-sm text-gray-500"><i data-feather="clock" class="inline mr-1 w-4 h-4"></i> Sat, 9am-1pm</span>
+                                    <a href="admissions.html" class="text-blue-900 hover:text-blue-700 font-medium">Enroll Now</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Digital Marketing Courses -->
+                <div id="digital" class="course-details">
+                    <h2 class="text-2xl font-bold text-blue-900 mb-6">Digital Marketing Courses</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        <!-- Ditigal Marketing Basics -->
+                        <div class="bg-white rounded-lg shadow-md overflow-hidden transition duration-300 hover:shadow-lg">
+                            <img src="http://static.photos/technology/640x360/1" alt="Digital Marketing Basics" class="w-full h-48 object-cover">
+                            <div class="p-6">
+                                <h3 class="text-xl font-bold text-blue-900 mb-2">Digital Marketing Basics</h3>
+                                <p class="text-gray-600 mb-4">Essential skills for creating professional documents and spreadsheets.</p>
+                                <div class="flex justify-between items-center mb-4">
+                                    <!-- UPDATED: Yellow to Red -->
+                                    <span class="text-red-500 font-medium">4 Weeks</span>
+                                    <span class="text-blue-900 font-bold">GHS 800</span>
+                                </div>
+                                <div class="flex justify-between items-center">
+                                    <span class="text-sm text-gray-500"><i data-feather="clock" class="inline mr-1 w-4 h-4"></i> Mon & Wed, 6-8pm</span>
+                                    <a href="admissions.html" class="text-blue-900 hover:text-blue-700 font-medium">Enroll Now</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Advanced Excel -->
+                        <div class="bg-white rounded-lg shadow-md overflow-hidden transition duration-300 hover:shadow-lg">
+                            <img src="http://static.photos/technology/640x360/2" alt="Advanced Excel Course" class="w-full h-48 object-cover">
+                            <div class="p-6">
+                                <h3 class="text-xl font-bold text-blue-900 mb-2">Social Media Marketing</h3>
+                                <p class="text-gray-600 mb-4">Master Facebook, Instagram, Google and TikTok marketing tools.</p>
+                                <div class="flex justify-between items-center mb-4">
+                                    <!-- UPDATED: Yellow to Red -->
+                                    <span class="text-red-500 font-medium">6 Weeks</span>
+                                    <span class="text-blue-900 font-bold">GHS 1,200</span>
+                                </div>
+                                <div class="flex justify-between items-center">
+                                    <span class="text-sm text-gray-500"><i data-feather="clock" class="inline mr-1 w-4 h-4"></i> Tue & Thu, 6-8pm</span>
+                                    <a href="admissions.html" class="text-blue-900 hover:text-blue-700 font-medium">Enroll Now</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- PowerPoint & Outlook -->
+                        <div class="bg-white rounded-lg shadow-md overflow-hidden transition duration-300 hover:shadow-lg">
+                            <img src="http://static.photos/technology/640x360/3" alt="PowerPoint & Outlook Course" class="w-full h-48 object-cover">
+                            <div class="p-6">
+                                <h3 class="text-xl font-bold text-blue-900 mb-2">SEO</h3>
+                                <p class="text-gray-600 mb-4">Create compelling presentations and master email management.</p>
+                                <div class="flex justify-between items-center mb-4">
+                                    <!-- UPDATED: Yellow to Red -->
+                                    <span class="text-red-500 font-medium">4 Weeks</span>
+                                    <span class="text-blue-900 font-bold">GHS 900</span>
+                                </div>
+                                <div class="flex justify-between items-center">
+                                    <span class="text-sm text-gray-500"><i data-feather="clock" class="inline mr-1 w-4 h-4"></i> Sat, 9am-1pm</span>
+                                    <a href="admissions.html" class="text-blue-900 hover:text-blue-700 font-medium">Enroll Now</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Course Details Modal -->
+            <div id="courseModal" class="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center hidden">
+                <div class="bg-white rounded-lg shadow-xl max-w-4xl w-full max-h-screen overflow-y-auto">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-4">
+                            <h2 id="modalCourseTitle" class="text-2xl font-bold text-blue-900">Course Title</h2>
+                            <button id="closeModal" class="text-gray-400 hover:text-gray-600">
+                                <i data-feather="x" class="w-6 h-6"></i>
+                            </button>
+                        </div>
+                        <div id="modalCourseContent">
+                            <!-- Content will be populated by JavaScript -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Course Comparison -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-blue-900 mb-4">Compare Our Courses</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Find the perfect program for your needs and budget</p>
+            </div>
+            <div class="overflow-x-auto">
+                <table class="w-full bg-white rounded-lg shadow-md">
+                    <thead>
+                        <tr class="bg-blue-900 text-white">
+                            <th class="p-4 text-left">Course</th>
+                            <th class="p-4 text-left">Duration</th>
+                            <th class="p-4 text-left">Schedule</th>
+                            <th class="p-4 text-left">Price</th>
+                            <th class="p-4 text-left">Level</th>
+                            <th class="p-4 text-left"></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="border-b border-gray-200 hover:bg-gray-50">
+                            <td class="p-4">English Beginner</td>
+                            <td class="p-4">8 Weeks</td>
+                            <td class="p-4">Mon & Wed, 4-6pm</td>
+                            <td class="p-4">GHS 1,200</td>
+                            <td class="p-4">Beginner</td>
+                            <td class="p-4"><a href="admissions.html" class="text-blue-900 hover:text-blue-700 font-medium">Enroll</a></td>
+                        </tr>
+                        <tr class="border-b border-gray-200 hover:bg-gray-50">
+                            <td class="p-4">English Intermediate</td>
+                            <td class="p-4">8 Weeks</td>
+                            <td class="p-4">Tue & Thu, 4-6pm</td>
+                            <td class="p-4">GHS 1,400</td>
+                            <td class="p-4">Intermediate</td>
+                            <td class="p-4"><a href="admissions.html" class="text-blue-900 hover:text-blue-700 font-medium">Enroll</a></td>
+                        </tr>
+                        <tr class="border-b border-gray-200 hover:bg-gray-50">
+                            <td class="p-4">English Advanced</td>
+                            <td class="p-4">10 Weeks</td>
+                            <td class="p-4">Mon & Wed, 6-8pm</td>
+                            <td class="p-4">GHS 1,800</td>
+                            <td class="p-4">Advanced</td>
+                            <td class="p-4"><a href="admissions.html" class="text-blue-900 hover:text-blue-700 font-medium">Enroll</a></td>
+                        </tr>
+                        <tr class="border-b border-gray-200 hover:bg-gray-50">
+                            <td class="p-4">French Beginner</td>
+                            <td class="p-4">10 Weeks</td>
+                            <td class="p-4">Tue & Thu, 2-4pm</td>
+                            <td class="p-4">GHS 1,400</td>
+                            <td class="p-4">Beginner</td>
+                            <td class="p-4"><a href="admissions.html" class="text-blue-900 hover:text-blue-700 font-medium">Enroll</a></td>
+                        </tr>
+                        <tr class="border-b border-gray-200 hover:bg-gray-50">
+                            <td class="p-4">French Intermediate</td>
+                            <td class="p-4">10 Weeks</td>
+                            <td class="p-4">Mon & Wed, 2-4pm</td>
+                            <td class="p-4">GHS 1,600</td>
+                            <td class="p-4">Intermediate</td>
+                            <td class="p-4"><a href="admissions.html" class="text-blue-900 hover:text-blue-700 font-medium">Enroll</a></td>
+                        </tr>
+                        <tr class="border-b border-gray-200 hover:bg-gray-50">
+                            <td class="p-4">French for Business</td>
+                            <td class="p-4">12 Weeks</td>
+                            <td class="p-4">Sat, 9am-1pm</td>
+                            <td class="p-4">GHS 2,000</td>
+                            <td class="p-4">Advanced</td>
+                            <td class="p-4"><a href="admissions.html" class="text-blue-900 hover:text-blue-700 font-medium">Enroll</a></td>
+                        </tr>
+                        <tr class="border-b border-gray-200 hover:bg-gray-50">
+                            <td class="p-4">Word & Excel Basics</td>
+                            <td class="p-4">4 Weeks</td>
+                            <td class="p-4">Mon & Wed, 6-8pm</td>
+                            <td class="p-4">GHS 800</td>
+                            <td class="p-4">Beginner</td>
+                            <td class="p-4"><a href="admissions.html" class="text-blue-900 hover:text-blue-700 font-medium">Enroll</a></td>
+                        </tr>
+                        <tr class="border-b border-gray-200 hover:bg-gray-50">
+                            <td class="p-4">Advanced Excel</td>
+                            <td class="p-4">6 Weeks</td>
+                            <td class="p-4">Tue & Thu, 6-8pm</td>
+                            <td class="p-4">GHS 1,200</td>
+                            <td class="p-4">Intermediate</td>
+                            <td class="p-4"><a href="admissions.html" class="text-blue-900 hover:text-blue-700 font-medium">Enroll</a></td>
+                        </tr>
+                        <tr class="border-b border-gray-200 hover:bg-gray-50">
+                            <td class="p-4">PowerPoint & Outlook</td>
+                            <td class="p-4">4 Weeks</td>
+                            <td class="p-4">Sat, 9am-1pm</td>
+                            <td class="p-4">GHS 900</td>
+                            <td class="p-4">Beginner</td>
+                            <td class="p-4"><a href="admissions.html" class="text-blue-900 hover:text-blue-700 font-medium">Enroll</a></td>
+                        </tr>
+                        <tr class="hover:bg-gray-50">
+                            <td class="p-4">Digital Marketing</td>
+                            <td class="p-4">6 Weeks</td>
+                            <td class="p-4">Mon & Wed, 4-6pm</td>
+                            <td class="p-4">GHS 1,500</td>
+                            <td class="p-4">Intermediate</td>
+                            <td class="p-4"><a href="admissions.html" class="text-blue-900 hover:text-blue-700 font-medium">Enroll</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16 bg-red-500 text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold mb-6">Need Help Choosing a Course?</h2>
+            <p class="text-xl mb-8 max-w-2xl mx-auto">Our advisors can help you select the perfect program based on your goals and experience level.</p>
+            <a href="contact.html" class="inline-block bg-blue-900 hover:bg-blue-800 text-white font-bold py-3 px-8 rounded-lg transition duration-300">Contact an Advisor</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <!-- Same footer as index.html -->
+	<!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Infoworld Institute</h3>
+                    <p class="text-gray-400 mb-4">Empowering individuals through quality education and professional training in Ghana.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white"><i data-feather="facebook"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i data-feather="twitter"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i data-feather="instagram"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i data-feather="linkedin"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-400 hover:text-white">Home</a></li>
+                        <li><a href="about.html" class="text-gray-400 hover:text-white">About Us</a></li>
+                        <li><a href="courses.html" class="text-gray-400 hover:text-white">Courses</a></li>
+                        <li><a href="admissions.html" class="text-gray-400 hover:text-white">Admissions</a></li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-white">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Contact Info</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li class="flex items-start">
+                            <i data-feather="map-pin" class="mr-2 mt-1 w-4 h-4"></i>
+                            <span>123 Hill Street, Accra, Ghana</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-feather="phone" class="mr-2 mt-1 w-4 h-4"></i>
+                            <span>+233 123 456 789</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-feather="mail" class="mr-2 mt-1 w-4 h-4"></i>
+                            <span>info@infoworldinstitute.org</span>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Newsletter</h4>
+                    <p class="text-gray-400 mb-4">Subscribe to our newsletter for course updates and educational resources.</p>
+                    <form class="flex">
+                        <input type="email" placeholder="Your email" class="bg-gray-800 text-white px-4 py-2 rounded-l-lg focus:outline-none focus:ring-2 focus:ring-red-500 w-full">
+                        <button type="submit" class="bg-red-500 hover:bg-red-600 text-white px-4 py-2 rounded-r-lg transition duration-300">
+                            <i data-feather="send" class="w-4 h-4"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2025 Infoworld Professional Institute. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+        <!-- Floating WhatsApp Button -->
+        <a href="https://wa.me/233123456789" target="_blank" class="fixed bottom-6 right-6 bg-red-500 text-white p-3 rounded-full shadow-lg hover:bg-red-600 transition duration-300">
+<i data-feather="message-circle" class="w-6 h-6"></i>
+    </a>
+
+    <!-- Scripts -->
+    <script>
+        // Course Tab Navigation
+        const tabs = document.querySelectorAll('.course-tab');
+        const courseDetails = document.querySelectorAll('.course-details');
+        
+        tabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                // Remove active class from all tabs
+                tabs.forEach(t => t.classList.remove('active'));
+                // Add active class to clicked tab
+                tab.classList.add('active');
+                
+                // Hide all course details
+                courseDetails.forEach(detail => detail.classList.remove('active'));
+                // Show selected course details
+                const tabId = tab.getAttribute('data-tab');
+                if (tabId === 'all') {
+                    courseDetails.forEach(detail => detail.classList.add('active'));
+                } else {
+                    document.getElementById(tabId).classList.add('active');
+                }
+            });
+        });
+
+        // Course Modal
+        const courseModal = document.getElementById('courseModal');
+        const closeModal = document.getElementById('closeModal');
+        
+        // Close modal when clicking X
+        closeModal.addEventListener('click', () => {
+            courseModal.classList.add('hidden');
+        });
+        
+        // Close modal when clicking outside content
+        courseModal.addEventListener('click', (e) => {
+            if (e.target === courseModal) {
+                courseModal.classList.add('hidden');
+            }
+        });
+
+        feather.replace();
+        // Mobile menu toggle
+		document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>

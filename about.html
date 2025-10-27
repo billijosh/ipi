@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learn about Infoworld Professional Institute's mission, vision, history, and facilities. We're Ghana's premier training institution for language and professional courses.">
+    <title>About Us - Infoworld Professional Institute</title>
+    <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #2C3E50;
+            --secondary: #E74C3C; /* Official Brand Red */
+            --accent: #ECF0F1;
+        }
+        .mission-bg {
+            background: linear-gradient(rgba(30, 58, 138, 0.9), rgba(30, 58, 138, 0.9)), url('http://static.photos/education/1200x630/43');
+            background-size: cover;
+            background-position: center;
+        }
+        .value-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        .history-timeline::before {
+            content: '';
+            position: absolute;
+            left: 20px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: var(--secondary);
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-white shadow-md z-50">
+        <!-- Same navigation as index.html -->
+		<!-- Navigation -->
+    
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <a href="index.html" class="flex items-center">
+                <img src="ipilogo.png" alt="Infoworld Professional Institute Logo" class="h-12">
+            </a>
+
+            <div class="hidden md:flex space-x-8">
+                <a href="index.html" class="text-blue-900 font-medium nav-link">Home</a>
+                <a href="about.html" class="text-gray-600 hover:text-blue-900 font-medium nav-link">About</a>
+                <a href="courses.html" class="text-gray-600 hover:text-blue-900 font-medium nav-link">Courses</a>
+                <a href="admissions.html" class="text-gray-600 hover:text-blue-900 font-medium nav-link">Admissions</a>
+                <a href="events.html" class="text-gray-600 hover:text-blue-900 font-medium nav-link">Events</a>
+                <a href="contact.html" class="text-gray-600 hover:text-blue-900 font-medium nav-link">Contact</a>
+                <a href="blog.html" class="text-gray-600 hover:text-blue-900 font-medium nav-link">Blog</a>
+            </div>
+            <div class="flex items-center space-x-4">
+                <a href="portal.html" class="hidden md:block bg-blue-900 text-white px-4 py-2 rounded-lg hover:bg-blue-800 transition">Student Portal</a>
+                <button id="mobile-menu-button" class="md:hidden text-blue-900">
+                    <i data-feather="menu" class="w-6 h-6"></i>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white py-4 px-4 shadow-lg">
+            <a href="index.html" class="block py-2 text-blue-900 font-medium">Home</a>
+            <a href="about.html" class="block py-2 text-gray-600 hover:text-blue-900 font-medium">About</a>
+            <a href="courses.html" class="block py-2 text-gray-600 hover:text-blue-900 font-medium">Courses</a>
+            <a href="admissions.html" class="block py-2 text-gray-600 hover:text-blue-900 font-medium">Admissions</a>
+            <a href="events.html" class="block py-2 text-gray-600 hover:text-blue-900 font-medium">Events</a>
+            <a href="contact.html" class="block py-2 text-gray-600 hover:text-blue-900 font-medium">Contact</a>
+            <a href="portal.html" class="block mt-2 bg-blue-900 text-white px-4 py-2 rounded-lg text-center">Student Portal</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="mission-bg text-white pt-32 pb-20 md:pt-40 md:pb-32">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-4xl md:text-6xl font-bold mb-4">About Infoworld Professional Institute</h1>
+            <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">Discover our story, mission, and what makes us the preferred choice for professional training in Ghana.</p>
+        </div>
+    </section>
+
+    <!-- Mission & Vision -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row items-center mb-16">
+                <div class="md:w-1/2 mb-8 md:mb-0 md:pr-8">
+                    <h2 class="text-3xl font-bold text-blue-900 mb-4">Our Mission</h2>
+                    <p class="text-gray-600">To provide high-quality, accessible training that empowers individuals with practical skills for personal development and professional success in a globalized world.</p>
+                </div>
+                <div class="md:w-1/2">
+                    <img src="http://static.photos/education/640x360/5" alt="Mission illustration" class="rounded-lg shadow-lg w-full">
+                </div>
+            </div>
+            <div class="flex flex-col md:flex-row-reverse items-center">
+                <div class="md:w-1/2 mb-8 md:mb-0 md:pl-8">
+                    <h2 class="text-3xl font-bold text-blue-900 mb-4">Our Vision</h2>
+                    <p class="text-gray-600">To become West Africa's leading training institution, recognized for excellence in language and professional skills development that transforms lives and communities.</p>
+                </div>
+                <div class="md:w-1/2">
+                    <img src="http://static.photos/education/640x360/6" alt="Vision illustration" class="rounded-lg shadow-lg w-full">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Core Values -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-blue-900 mb-4">Our Core Values</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">These principles guide everything we do at Accra Skills Academy</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-md value-card transition duration-300">
+                    <div class="bg-blue-100 text-blue-900 w-16 h-16 rounded-full flex items-center justify-center mb-4 mx-auto">
+                        <i data-feather="award" class="w-8 h-8"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-center text-blue-900 mb-2">Excellence</h3>
+                    <p class="text-gray-600 text-center">We strive for the highest standards in teaching, learning, and student support.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md value-card transition duration-300">
+                    <div class="bg-blue-100 text-blue-900 w-16 h-16 rounded-full flex items-center justify-center mb-4 mx-auto">
+                        <i data-feather="users" class="w-8 h-8"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-center text-blue-900 mb-2">Integrity</h3>
+                    <p class="text-gray-600 text-center">We conduct our business with honesty, transparency, and ethical practices.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md value-card transition duration-300">
+                    <div class="bg-blue-100 text-blue-900 w-16 h-16 rounded-full flex items-center justify-center mb-4 mx-auto">
+                        <i data-feather="globe" class="w-8 h-8"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-center text-blue-900 mb-2">Innovation</h3>
+                    <p class="text-gray-600 text-center">We embrace new teaching methods and technologies to enhance learning.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md value-card transition duration-300">
+                    <div class="bg-blue-100 text-blue-900 w-16 h-16 rounded-full flex items-center justify-center mb-4 mx-auto">
+                        <i data-feather="heart" class="w-8 h-8"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-center text-blue-900 mb-2">Diversity</h3>
+                    <p class="text-gray-600 text-center">We welcome students from all backgrounds and celebrate our differences.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md value-card transition duration-300">
+                    <div class="bg-blue-100 text-blue-900 w-16 h-16 rounded-full flex items-center justify-center mb-4 mx-auto">
+                        <i data-feather="book" class="w-8 h-8"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-center text-blue-900 mb-2">Empowerment</h3>
+                    <p class="text-gray-600 text-center">We equip students with skills that lead to personal and professional growth.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md value-card transition duration-300">
+                    <div class="bg-blue-100 text-blue-900 w-16 h-16 rounded-full flex items-center justify-center mb-4 mx-auto">
+                        <i data-feather="home" class="w-8 h-8"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-center text-blue-900 mb-2">Community</h3>
+                    <p class="text-gray-600 text-center">We foster a supportive learning environment that extends beyond the classroom.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our History -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-blue-900 mb-4">Our History</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">From humble beginnings to becoming a leader in professional education</p>
+            </div>
+            <div class="relative history-timeline max-w-3xl mx-auto pl-12">
+                <!-- Timeline Item 1 -->
+                <div class="mb-10 relative">
+                    <!-- UPDATED: Yellow to Red -->
+                    <div class="absolute left-0 top-0 w-10 h-10 rounded-full bg-red-500 flex items-center justify-center -ml-12">
+                        <span class="text-white font-bold">2010</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-blue-900 mb-2">Foundation</h3>
+                    <p class="text-gray-600">Infoworld Professional Institute was founded by Dr. Kofi Ansah as a small language center offering English classes to international students.</p>
+                </div>
+                <!-- Timeline Item 2 -->
+                <div class="mb-10 relative">
+                    <!-- UPDATED: Yellow to Red -->
+                    <div class="absolute left-0 top-0 w-10 h-10 rounded-full bg-red-500 flex items-center justify-center -ml-12">
+                        <span class="text-white font-bold">2013</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-blue-900 mb-2">First Expansion</h3>
+                    <p class="text-gray-600">Added French language program and moved to a larger facility in central Accra to accommodate growing student numbers.</p>
+                </div>
+                <!-- Timeline Item 3 -->
+                <div class="mb-10 relative">
+                    <!-- UPDATED: Yellow to Red -->
+                    <div class="absolute left-0 top-0 w-10 h-10 rounded-full bg-red-500 flex items-center justify-center -ml-12">
+                        <span class="text-white font-bold">2016</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-blue-900 mb-2">Professional Courses</h3>
+                    <p class="text-gray-600">Launched our first professional training programs in Microsoft Office and basic marketing skills.</p>
+                </div>
+                <!-- Timeline Item 4 -->
+                <div class="mb-10 relative">
+                    <!-- UPDATED: Yellow to Red -->
+                    <div class="absolute left-0 top-0 w-10 h-10 rounded-full bg-red-500 flex items-center justify-center -ml-12">
+                        <span class="text-white font-bold">2019</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-blue-900 mb-2">Accreditation</h3>
+                    <p class="text-gray-600">Received full accreditation from the Ghana Education Service and expanded our digital marketing program.</p>
+                </div>
+                <!-- Timeline Item 5 -->
+                <div class="relative">
+                    <!-- UPDATED: Yellow to Red -->
+                    <div class="absolute left-0 top-0 w-10 h-10 rounded-full bg-red-500 flex items-center justify-center -ml-12">
+                        <span class="text-white font-bold">2023</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-blue-900 mb-2">Modern Campus</h3>
+                    <p class="text-gray-600">Opened our state-of-the-art training facility with smart classrooms and student support services.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Accreditation -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-blue-900 mb-4">Accreditation & Partnerships</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Recognized by leading educational and professional organizations</p>
+            </div>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 items-center">
+                <img src="http://static.photos/education/320x240/1" alt="Ghana Education Service" class="h-16 object-contain mx-auto">
+                <img src="http://static.photos/education/320x240/2" alt="British Council" class="h-16 object-contain mx-auto">
+                <img src="http://static.photos/education/320x240/3" alt="Alliance Française" class="h-16 object-contain mx-auto">
+                <img src="http://static.photos/education/320x240/4" alt="Microsoft Certified" class="h-16 object-contain mx-auto">
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Team -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-blue-900 mb-4">Meet Our Team</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Dedicated professionals committed to your success</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-gray-50 p-6 rounded-lg text-center">
+                    <img src="http://static.photos/people/200x200/4" alt="Dr. Kofi Ansah" class="w-32 h-32 rounded-full mx-auto mb-4">
+                    <h3 class="text-xl font-bold text-blue-900 mb-1">Dr. Kofi Ansah</h3>
+                    <p class="text-red-500 font-medium mb-3">Founder & Director</p>
+                    <p class="text-gray-600">PhD in Applied Linguistics with 20+ years of teaching experience.</p>
+                </div>
+                <div class="bg-gray-50 p-6 rounded-lg text-center">
+                    <img src="http://static.photos/people/200x200/5" alt="Ama Serwaa" class="w-32 h-32 rounded-full mx-auto mb-4">
+                    <h3 class="text-xl font-bold text-blue-900 mb-1">Ama Serwaa</h3>
+                    <p class="text-red-500 font-medium mb-3">Academic Dean</p>
+                    <p class="text-gray-600">MA in Education with specialization in curriculum development.</p>
+                </div>
+                <div class="bg-gray-50 p-6 rounded-lg text-center">
+                    <img src="http://static.photos/people/200x200/6" alt="Yaw Boateng" class="w-32 h-32 rounded-full mx-auto mb-4">
+                    <h3 class="text-xl font-bold text-blue-900 mb-1">Yaw Boateng</h3>
+                    <p class="text-red-500 font-medium mb-3">Digital Marketing Lead</p>
+                    <p class="text-gray-600">Certified Digital Marketing Professional with industry experience.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Campus Tour -->
+    <section class="py-16 bg-blue-900 text-white">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-8 md:mb-0 md:pr-8">
+                    <h2 class="text-3xl font-bold mb-4">Our Campus</h2>
+                    <p class="mb-6">Visit our modern facility in the heart of Accra, equipped with smart classrooms, computer labs, and student lounge areas.</p>
+                    <p class="mb-6">We offer a conducive learning environment with all the amenities needed for effective training.</p>
+                    <!-- UPDATED: Yellow to Red -->
+                    <a href="contact.html" class="inline-block bg-red-500 hover:bg-red-600 text-white font-medium py-2 px-6 rounded-lg transition duration-300">Schedule a Visit</a>
+                </div>
+                <div class="md:w-1/2">
+                    <div class="grid grid-cols-2 gap-4">
+                        <img src="http://static.photos/education/320x240/5" alt="Classroom" class="rounded-lg shadow-lg w-full">
+                        <img src="http://static.photos/education/320x240/6" alt="Computer Lab" class="rounded-lg shadow-lg w-full">
+                        <img src="http://static.photos/education/320x240/7" alt="Library" class="rounded-lg shadow-lg w-full">
+                        <img src="http://static.photos/education/320x240/8" alt="Student Lounge" class="rounded-lg shadow-lg w-full">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <!-- Same footer as index.html -->
+	<!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Infoworld Institute</h3>
+                    <p class="text-gray-400 mb-4">Empowering individuals through quality education and professional training in Ghana.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white"><i data-feather="facebook"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i data-feather="twitter"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i data-feather="instagram"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i data-feather="linkedin"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-400 hover:text-white">Home</a></li>
+                        <li><a href="about.html" class="text-gray-400 hover:text-white">About Us</a></li>
+                        <li><a href="courses.html" class="text-gray-400 hover:text-white">Courses</a></li>
+                        <li><a href="admissions.html" class="text-gray-400 hover:text-white">Admissions</a></li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-white">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Contact Info</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li class="flex items-start">
+                            <i data-feather="map-pin" class="mr-2 mt-1 w-4 h-4"></i>
+                            <span>123 Hill Street, Accra, Ghana</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-feather="phone" class="mr-2 mt-1 w-4 h-4"></i>
+                            <span>+233 123 456 789</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-feather="mail" class="mr-2 mt-1 w-4 h-4"></i>
+                            <span>info@infoworldinstitute.org</span>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Newsletter</h4>
+                    <p class="text-gray-400 mb-4">Subscribe to our newsletter for course updates and educational resources.</p>
+                    <form class="flex">
+                        <!-- UPDATED: Yellow to Red -->
+                        <input type="email" placeholder="Your email" class="bg-gray-800 text-white px-4 py-2 rounded-l-lg focus:outline-none focus:ring-2 focus:ring-red-500 w-full">
+                        <!-- UPDATED: Yellow to Red -->
+                        <button type="submit" class="bg-red-500 hover:bg-red-600 text-white px-4 py-2 rounded-r-lg transition duration-300">
+                            <i data-feather="send" class="w-4 h-4"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2025 Infoworld Professional Institute. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+        <!-- Floating WhatsApp Button -->
+        <a href="https://wa.me/233123456789" target="_blank" class="fixed bottom-6 right-6 bg-red-500 text-white p-3 rounded-full shadow-lg hover:bg-red-600 transition duration-300">
+<i data-feather="message-circle" class="w-6 h-6"></i>
+    </a>
+
+    <!-- Scripts -->
+    <script>
+        feather.replace();
+        // Same mobile menu toggle as index.html
+		
+		document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+
+        // Testimonial Slider - REMOVED UNUSED CODE BLOCK TO FIX ERROR
+
+        // Scroll reveal animation
+        window.addEventListener('scroll', function() {
+            const elements = document.querySelectorAll('.course-card, .testimonial-slide');
+            elements.forEach(element => {
+                const elementPosition = element.getBoundingClientRect().top;
+                const screenPosition = window.innerHeight / 1.2;
+                
+                if (elementPosition < screenPosition) {
+                    element.style.opacity = '1';
+                    element.style.transform = 'translateY(0)';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
